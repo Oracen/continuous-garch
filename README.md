@@ -65,7 +65,9 @@ Evidently we don't need to consider hundreds of unique names, but rather pay att
 - ARCH models are a strictly-positive regression on the expectated variance $\sigma$, often denoted $\mathbb{E}[\sqrt{\sigma^2}]$
 - GARCH models combine estimates of both $\mu$ and $\sigma$
 
-### What Went Wrong
+ARIMA models work pretty well, and they're simpler than we thought! So why would we choose to reinvent the wheel?
+
+### Something Went Wrong
 
 We have "established" that these time series walk and talk a lot like linear regresssions. (Duck-typed homomorphisms?) But modulo dataset construction, time series models also inherit a lot of the assumptions regarding distributional assumptions Recall we said earlier: 
 
