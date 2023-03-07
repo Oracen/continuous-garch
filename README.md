@@ -42,6 +42,8 @@ Standard time-series analysis assumes parameters are largely static through time
 
 ### What Does Standard Time Series Analysis Look Like
 
+You're right, I'm speaking in generalities. Time to define terms. After all, time series analysis is a pretty broad topic. I'm specifically talking about the kinds of unbounded time-series autoregressive processes amenable to parameter identification. Think ARIMA, GARCH and friends.
+
 Consider the foundational dynamic time series model, an $AR(p)$ process. The formulation of both the problem and its solution depends on the assumption that the process is sampled from the distribution $P(X_{t+1} = x | X_t, X_{t-1}, ..., X_{t-p},\phi)$, where $\phi \in \mathbb{R}^p$ and corresponds to the weighting terms on each components' contribution to $X_{t+1}$. Importantly, note that $\phi$ has no dependence on $t$. We will ignore initial conditions for now (where $t < p$) which is important for an unbiased solution, but not conceptually to the problem.
 
 The textbook answer for how to solve this problem is the Yule-Walker equations. I propose a simpler intuition. Looking at Yule-Walker, you have the following:
